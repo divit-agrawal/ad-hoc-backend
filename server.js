@@ -24,6 +24,7 @@ const login = require("./login");
 const register = require("./register");
 
 const heartbeat = require("./heartbeat");
+const heartbeatget = require("./heartbeatget");
 
 app.use(
   bodyParser.urlencoded({
@@ -33,6 +34,7 @@ app.use(
 app.use("/register", register);
 app.use("/login", login);
 app.use("/heartbeat", heartbeat);
+app.use("/heartbeatget", heartbeatget);
 
 //Routes:
 app.get("/", (req, res) => {
